@@ -21,9 +21,10 @@ const callAPI = () => {
         },
         body: JSON.stringify(data)
     }
-    fetch('https://jsonplaceholder.typicode.com/posts', params).then(response => response.json())
+    fetch('https://jsonplaceholder.typicode.com/posts', params)
+        .then(response => response.json())
         .then((data) => {
-            return console.log(data);
+            return console.log('Post API Data:---', data)
         }).catch((error) => {
             console.log('ERROR:', error)
         })
